@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+* body {
+  min-height: 100vh;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: hsl(210, 46%, 95%);
+  gap: 2.5em;
+  padding: 20px;
+}
+* body .people {
+  width: min(80vw, 80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* body .people .container {
+  display: grid;
+}
+* body .people .container .box {
+  border-radius: 15px;
+  padding: 30px 40px;
+}
+* body .people .container .box .user {
+  display: flex;
+  margin-bottom: 10px;
+}
+* body .people .container .box .user .profile_img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid hsl(263, 48%, 63%);
+  margin-right: 10px;
+}
+* body .people .container .box .user .about {
+  margin-top: 3px;
+  font-weight: 0;
+}
+* body .people .container .box .user .about .name {
+  letter-spacing: 0.1em;
+}
+* body .people .container .box .user .about .education {
+  opacity: 0.7;
+}
+* body .people .container .box .title {
+  font-size: 16.1px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+* body .people .container .box .summary {
+  opacity: 0.7;
+  line-height: 1.5;
+  font-weight: 600;
+}
+* body .people .container .daniel_clifford {
+  background: hsl(263, 55%, 52%) url(../images/bg-pattern-quotation.svg) no-repeat 450px top;
+  background-size: 100px;
+}
+* body .people .container .jonathan_walters {
+  background: hsl(217, 19%, 35%);
+}
+* body .people .container .jonathan_walters .user .profile_img {
+  border: 2px solid hsl(226, 17%, 76%);
+}
+* body .people .container .jeanette_harmon,
+* body .people .container .kira_whittle {
+  color: #222;
+  background: hsl(0, 0%, 100%);
+}
+* body .people .container .patrick_abrams {
+  background: hsl(219, 29%, 14%);
+}
+* body .people .container {
+  width: min(90vw, 90%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.5em;
+}
+* body .people .container .daniel_clifford {
+  grid-column: span 2;
+}
+* body .people .container .patrick_abrams {
+  grid-column: 2/span 2;
+}
+* body .people .container .jeanette_harmon {
+  grid-row: 2;
+}
+* body .people .container .kira_whittle {
+  grid-row: 1/span 2;
+  grid-column-start: 4;
+}
+
+@media (max-width: 1640px) {
+  .daniel_clifford {
+    background-position: 450px top !important;
+  }
+  .container {
+    width: min(100vw, 100%) !important;
+  }
+}
+@media (max-width: 1500px) {
+  .daniel_clifford {
+    background-position: 400px top !important;
+  }
+  .container {
+    width: min(100vw, 100%) !important;
+  }
+}
+@media (max-width: 1400px) {
+  .people {
+    width: min(100vw, 100%) !important;
+  }
+  .container {
+    width: min(100vw, 100%) !important;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: repeat(3, 0.5fr) !important;
+    gap: 1.5em;
+  }
+  .container .kira_whittle {
+    grid-row: 3/span 1 !important;
+    grid-column: span 3 !important;
+  }
+  .container .daniel_clifford {
+    background-position: 650px top !important;
+  }
+}
+@media (max-width: 1140px) {
+  .people {
+    width: min(90vw, 90%);
+  }
+  .container {
+    width: min(100vw, 100%);
+    display: grid;
+    grid-template-columns: unset !important;
+    grid-template-rows: repeat(5, 0.5fr) !important;
+    gap: 1.5em;
+  }
+  .container .box {
+    grid-column: span 2 !important;
+  }
+  .container .jeanette_harmon {
+    grid-row-start: 3 !important;
+  }
+  .container .kira_whittle {
+    grid-row-start: 5 !important;
+  }
+  .container .daniel_clifford {
+    background-position: 750px top !important;
+  }
+}
+@media (max-width: 900px) {
+  .container .daniel_clifford {
+    background-position: 640px top !important;
+  }
+}
+@media (max-width: 768px) {
+  .people {
+    width: min(100vw, 100%) !important;
+  }
+  .container {
+    width: min(100vw, 100%) !important;
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: min(100vh, 90%);
+    gap: 1.5em;
+  }
+  .container .daniel_clifford {
+    background-position: 500px top !important;
+  }
+}
+@media (max-width: 650px) {
+  .people .container .daniel_clifford {
+    background-position: 400px top !important;
+  }
+}
+@media (max-width: 560px) {
+  .people .container .daniel_clifford {
+    background-position: 300px top !important;
+  }
+}
+@media (max-width: 426px) {
+  .people {
+    width: min(100vw, 100%) !important;
+  }
+  .people .container {
+    width: min(100vw, 100%) !important;
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: min(100vh, 90%);
+    gap: 1.5em;
+  }
+  .people .container .daniel_clifford {
+    background-position: 250px top !important;
+  }
+}/*# sourceMappingURL=Responsive.css.map */
