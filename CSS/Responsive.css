@@ -24,6 +24,11 @@
 }
 * body .people .container {
   display: grid;
+  width: min(90vw, 90%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.5em;
 }
 * body .people .container .box {
   border-radius: 15px;
@@ -65,6 +70,7 @@
 * body .people .container .daniel_clifford {
   background: hsl(263, 55%, 52%) url(../images/bg-pattern-quotation.svg) no-repeat 450px top;
   background-size: 100px;
+  grid-column: span 2;
 }
 * body .people .container .jonathan_walters {
   background: hsl(217, 19%, 35%);
@@ -77,26 +83,18 @@
   color: #222;
   background: hsl(0, 0%, 100%);
 }
+* body .people .container .jeanette_harmon .user .profile_img,
+* body .people .container .kira_whittle .user .profile_img {
+  border: 2px solid #fff;
+}
 * body .people .container .patrick_abrams {
   background: hsl(219, 29%, 14%);
-}
-* body .people .container {
-  width: min(90vw, 90%);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 1.5em;
-}
-* body .people .container .daniel_clifford {
-  grid-column: span 2;
-}
-* body .people .container .patrick_abrams {
   grid-column: 2/span 2;
 }
-* body .people .container .jeanette_harmon {
+* body .people .jeanette_harmon {
   grid-row: 2;
 }
-* body .people .container .kira_whittle {
+* body .people .kira_whittle {
   grid-row: 1/span 2;
   grid-column-start: 4;
 }

@@ -21,6 +21,11 @@
             align-items: center;
             .container{
                 display: grid;
+                width: min(max(90vw),90%);
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                gap: 1.5em;
                 .box{
                     border-radius: 15px;
                     padding: 30px 40px;
@@ -62,6 +67,7 @@
                 .daniel_clifford{
                     background: hsl(263, 55%, 52%) url(../images/bg-pattern-quotation.svg) no-repeat 450px top;
                     background-size: 100px;
+                    grid-column: span 2;
                 }
                 .jonathan_walters{
                     background: hsl(217, 19%, 35%);
@@ -75,23 +81,18 @@
                 .kira_whittle{
                     color: #222;
                     background: hsl(0, 0%, 100%);
+                    .user{
+                        .profile_img{
+                            border: 2px solid #fff;
+                        }
+                    }
+
                 }
                 .patrick_abrams{
                     background: hsl(219, 29%, 14%);
-                }
-            }
-            .container{
-                width: min(max(90vw),90%);
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                grid-template-rows: repeat(2, 1fr);
-                gap: 1.5em;
-                .daniel_clifford{
-                    grid-column: span 2;
-                }
-                .patrick_abrams{
                     grid-column: 2 / span 2;
                 }
+            }
                 .jeanette_harmon{
                     grid-row: 2;
                 }
@@ -99,7 +100,7 @@
                     grid-row: 1 / span 2;
                     grid-column-start: 4 ;
                 }
-            }
+            
         }
     }
 }
